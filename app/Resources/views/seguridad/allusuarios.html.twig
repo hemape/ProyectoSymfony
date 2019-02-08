@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+{% block titulo %}Listado de usuarios {% endblock %}
+{% block body %}
+
+<table style="width: 100%">
+  <tr>
+    <td style="witdh: 10%"></td>
+    <td style="background-color: white; width: 80%">
+
+      <!--CUERPO-->
+      <table align= "center" style="width: 100%" border="1">
+        <tr align="center">
+          <th>Nombre</th>
+
+
+          <!--<th>Edad</th>
+          <th>Poblacion</th>
+          <th>Puntos</th>-->
+        <tr>
+
+      {% for usuario in usuarios %}
+
+          <tr>
+            <td>{{ usuario.username }} <a href="{{ path('usuario', {'id':usuario.id})}}"><button type="button"> + info </button></a></td>
+
+            <!--  <td>{{ usuario.Edad }}</td>
+            <td>{{ usuario.Poblacion }}</td>
+            <td>{{ usuario.Puntos }}</td>-->
+          </tr>
+      {% endfor %}
+    </table>
+    </td>
+    <td style="witdh: 10%"></td>
+
+  </tr>
+</table>
+{% endblock %}

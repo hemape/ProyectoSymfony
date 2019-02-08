@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block titulo %}Listado de producto {% endblock %}
+{% block body %}
+
+<table style="width: 100%">
+  <tr>
+    <td style="witdh: 10%"></td>
+    <td style="background-color: white; width: 80%">
+
+      <!--CUERPO-->
+      <table align= "center" style="width: 100%" border="1">
+        <tr align="center">
+          <th>Nombre</th>
+          <!--<th>Precio</th>
+          <th>Categoria</th>
+          <th>Imagen</th>-->
+        <tr>
+
+      {% for producto in productos %}
+
+          <tr>
+
+            <td>{{ producto.NombreProducto }} <a href="{{ path('producto', {'id':producto.id})}}"><button type="button"> + info </button></a></td>
+            <!--<td>{{ producto.Precio }}</td>
+            <td>{{ producto.Categoria }}</td>
+            <td>{{ producto.Imagen }}</td>-->
+          </tr>
+      {% endfor %}
+    </table>
+    </td>
+    <td style="witdh: 10%"></td>
+
+  </tr>
+</table>
+{% endblock %}

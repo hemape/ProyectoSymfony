@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block titulo %}Editar Producto {% endblock %}
+{% block body %}
+
+    <div style="background: white">Editar producto</div>
+
+    <div style="background: white">{{ form_start(form) }}</div>
+    <div style="background: white">{{ form_widget(form) }}</div>
+    <div style="background: white">{{ form_end(form) }}</div>
+
+{% endblock %}
